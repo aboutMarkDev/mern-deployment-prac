@@ -9,7 +9,7 @@ export default function App() {
   const fetchUsers = async () => {
     setLoading(true);
     try {
-      const mefetch = await axios.get("http://localhost:5000/users");
+      const mefetch = await axios.get("https://mern-deployment-prac-backend.onrender.com/users");
       const { data } = mefetch;
       setUsers(data);
     } catch (error) {
@@ -27,7 +27,7 @@ export default function App() {
     e.preventDefault();
 
     try {
-      const newUser = await axios.post("http://localhost:5000/add", {
+      const newUser = await axios.post("https://mern-deployment-prac-backend.onrender.com/add", {
         username,
       });
       setUsername("");
